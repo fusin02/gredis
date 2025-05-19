@@ -1,4 +1,4 @@
-package parser
+package io
 
 import (
 	"bufio"
@@ -15,14 +15,6 @@ const (
 	BULK    = '$'
 	ARRAY   = '*'
 )
-
-type Value struct {
-	valueType string
-	str       string
-	num       int
-	bulk      string
-	array     []Value
-}
 
 type Parser struct {
 	reader *bufio.Reader
